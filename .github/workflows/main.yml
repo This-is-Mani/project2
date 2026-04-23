@@ -29,7 +29,7 @@ jobs:
         run: docker build -t mani-app .
 
       - name: Tag Image
-        run: docker tag mani-app:latest447633182123.dkr.ecr.us-east-1.amazonaws.com/mani-devops-app:latest
+        run: docker tag mani-app:latest 447633182123.dkr.ecr.us-east-1.amazonaws.com/mani-devops-app:latest
 
       - name: Push Image
         run: docker push 447633182123.dkr.ecr.us-east-1.amazonaws.com/mani-devops-app:latest

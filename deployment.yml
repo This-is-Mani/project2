@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mani-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mani-app
+  template:
+    metadata:
+      labels:
+        app: mani-app
+    spec:
+      containers:
+      - name: mani-app
+        image: 447633182123.dkr.ecr.us-east-1.amazonaws.com/mani-devops-app:latest
+        ports:
+        - containerPort: 5000
